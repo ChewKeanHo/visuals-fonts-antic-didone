@@ -18,15 +18,15 @@ headings, body text, and body footer text.
 
 [![banner](/.internals/trademarks/banner_1200x100.svg)](#)
 
-To secure the content from unauthorized modification by anyone down to `0-1` bit
-level, all documents and text are cryptographically signed using one or more
-cryptography tools such as but not limited to:
+To secure the content from unauthorized modification by anyone down to bit-level
+(`0|1`), they are cryptographically signed using one or more cryptography tools
+such as but not limited to:
 
 * [GnuPG](https://gnupg.org); AND/OR
 * [OpenSSL](https://www.openssl.org/).
 
-The public key and the associated certificate are attached. Only I keep and
-maintain the private keys. To verify the content's integrity:
+The public key and the associated certificate are attached. Only the main owner
+keeps and maintains the private keys. To verify the content's integrity:
 
 
 
@@ -66,11 +66,6 @@ $ openssl dgst -verify /path/to/pubkey.pem -signature /path/to/file.sig /path/to
 
 [![banner](/.internals/trademarks/banner_1200x100.svg)](#)
 
-> [!CAUTION]
->
-> Note to Maintainers: Update each sub-section here matching the project’s
-> specifications from time-to-time especially between releases.
-
 This decree defines the project’s policy on the use of Artificial Intelligence.
 The following sections list data lifecycle activities and indicate whether A.I.
 is deployed. Unless explicitly stated otherwise (e.g. deployment with
@@ -94,8 +89,6 @@ specifics), A.I. is not used for these tasks.
   slops.
 * One or more LLM A.I.s as the grammar and language corrector and enhancer for
   superpervised improvement against human written content.
-* One or more Transformer-based Diffusion Model A.I.s for generative image
-  creation.
 
 
 
@@ -112,8 +105,7 @@ specifics), A.I. is not used for these tasks.
 > * Upscaling an image with neural network not achievable with conventional
     image manipulation technologies.
 
-* One or more Convolutional Neural Network (CNN) A.I.s used for upscaling one
-  or more images for proper editing.
+* No deployment.
 
 
 
@@ -247,13 +239,15 @@ specifics), A.I. is not used for these tasks.
      proper naming conventions. For any following type descriptor
      (e.g. `Regular` or `Bold`), it is first separated by a dash (`-`).
      Descriptor can be anything.
-   * **Product SKU** - **STRICTLY THE SAME as the font family name in lowercase
-     AND replace space as dash (`-`) AND symbols to their english words
-     (e.g. `&` into `and`)** for inventory scanning compatibility purposes.
+   * **Product SKU** - **STRICTLY THE SAME as the font family name only in
+     lowercase basic Latin, number, and dash (`[a-z][0-9]-`)**. You **MUST**
+     replace all spaces to dash (`-`) and non-compatible characters to their
+     basic Latin counterparts (e.g. `&` -> `and`; `天宇` -> `tian-yu`). The SKU
+     is used across various applications including repository URL construction.
    * If any of the above is conflicting with existing registered font(s):
      * Comply to Copyright laws: *the oldest (check its license ownership birth
        time) stays; the new ones get updated*. In any case, the default action
-       is **drop the new ones**.
+       is **dropping the new ones**.
      * If you have the resources to drive the upstream changes:
        * Make sure you are *prepared to possibly face any legal reprecussion*
          from any socially undesirable creators.
@@ -264,19 +258,18 @@ specifics), A.I. is not used for these tasks.
    the following:
    * The upstream owns their repository/workspace; we own the re-distributed
      repository.
-   * For `AUTHORS.txt` or `CONTRIBUTORS.txt`:
-     1. `AUTHORS.txt` are for the legal entities that are responsible the
-        project (e.g. the creators). This is where you list all the principal
-        designers and directors entries clearly instead of using the collective
-        project entry.
-     2. `CONTRIBUTORS.txt` are for any registered entities that contributes to
-        the project but are not primarily responsible for the project. This is
-        where you place yourself here as a re-distributor.
-     3. Each files have their internal guides. Please follows accordingly.
+   * For `CREATORS.txt` or `CONTRIBUTORS.txt`:
+     1. `CREATORS.txt` are for the legal entities that are responsible and own
+        the project copyright like authors, principal designers, principal
+        engineers, etc.
+     2. `CONTRIBUTORS.txt` are for any legal entities that contributes to
+        the project but are not owning the project copyright like pull-request
+        contributors, curators, etc.
+     3. Each files have their internal guides. Please comply accordingly.
    * `LICENSE.txt`
-     1. Update the collective project entry (e.g. `The [TITLE] Project Authors`)
-        to match the owners and the re-distributors. The format is the same as
-        the ones in `AUTHORS.txt` and `CONTRIBUTORS.txt`.
+     1. Update the collective aliases (e.g. `The XYZ Project Authors`) matching
+        the project correctly. The format is the same as the ones in
+        `CREATORS.txt` and `CONTRIBUTORS.txt`.
      2. **ENSURE the creators entry is linked correctly with upstream websites**.
      3. When re-distributing a font, **ENSURE** the wording **CLEARLY STATES**
         that we **ARE NOT** the creators but a re-distributor.
@@ -331,8 +324,6 @@ specifics), A.I. is not used for these tasks.
 * [Agreed Inkscape License](.internals/terms-of-services/Inkscape-License.pdf)
 * [Agreed Inkscape Privacy Policy](.internals/privacy-policy/Inkscape-Privacy-Policy.pdf)
 * [Agreed (Holloway) Chew, Kean Ho's Upscaler License](.internals/terms-of-services/Upscaler-LICENSE.txt)
-* [Agreed Perchance.org Terms of Service](.internals/terms-of-services/PerchanceORG-Terms-of-Service.pdf)
-* [Agreed Perchance.org Privacy Policy](.internals/privacy-policy/PerchanceORG-Privacy-Policy.pdf)
 
 This entire repository is licensed under [SIL Open Font License](LICENSE.txt).
 To ensure better understanding of this license, the following sub-sections will

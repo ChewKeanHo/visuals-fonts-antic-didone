@@ -1,8 +1,10 @@
 Copyright 2026 The Antic Didone Project Re-Distributors (https://github.com/ChewKeanHo/visuals-fonts-antic-didone)
 Copyright 2011 The Antic Didone Project Authors (https://github.com/librefonts/anticdidone)
 
-The above unified aliases have one or more entities listed inside the project's
-AUTHORS.txt and CONTRIBUTORS.txt files separately. Please refer to them for the
+The above unified aliases have one or more actual legal entities listed outside
+of this document: (1) 'CREATORS.txt' or 'AUTHORS.txt'; and
+(2) 'CONTRIBUTORS.txt'. They are located usually placed next to this document
+in their respective project repository. Please refer to them for compiling the
 complete list accordingly.
 
 
